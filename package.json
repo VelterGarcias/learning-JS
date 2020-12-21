@@ -1,0 +1,24 @@
+{
+  "type": "module",
+  "name": "learning-js",
+  "version": "1.0.0",
+  "description": "- Algorítimo: Definir uma série de passos para alcançar um objetivo.\r - Pseudocódigo: código que não é código.\r - Teste de Mesa: testar cada parte do código, como debugger.\r - Tipos de programa: Compilado, Interpretado, PseudoCompilado e JIT (Just In Time - Compilado na hora que - precisa)\r - Variáveis: espaço reservado na memória para armazenar uma informação.\r - Tipos de Dados: inteiros, decimais, strings, boolean, classe\r - Operadores: atribuir, comparar, fazer contas, conversão para binários\r - Variável Indexada, Vetor ou Array: começa em 0.\r - Vetor de Vetores ou Matriz\r - IF: espera sempre uma condição verdadeira para executar o primeiro comando\r - Switch: em casos específicos (lembrar de usar uma execução padrão para que o código não quebre)\r - while e doWhile: repetição enquanto\r - for: para um determinado número de vezes\r - for Each: para cada item de um array\r - função: reaproveitar uma parte do nosso código. é possivel encadear funções.\r   - Orientação a Objetos: cria uma classe onde você vai descrever como vai ser o seu objeto. Cada objeto é - uma instancia da classe.\r - .this e .self (alterar só a instancia ou toda a classe e suas instancias)\r - Atributos e Métodos = variáveis e funções\r - encapsulamento: public, private e protected\r - Herança\r - Interfaces: regras que a classe deve atender para ser criada\r - Acesso: variável.método ou variável.atributo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VelterGarcias/learning-JS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VelterGarcias/learning-JS/issues"
+  },
+  "homepage": "https://github.com/VelterGarcias/learning-JS#readme",
+  "dependencies": {
+    "axios": "^0.21.0"
+  }
+}

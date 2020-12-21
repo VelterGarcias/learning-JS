@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+
+<body>
+    <h1>0</h1>
+
+    <button>Não Clique</button>
+    <button id="pode"> Clique</button>
+    <hr>
+    <input type="text">
+    <hr>
+    <button id="a">Desligar Interval</button>
+    <button id="b">Desligar Timeout</button>
+
+    <script>
+
+        document.querySelector('input').addEventListener('keydown', (e) => {
+            console.log(e.type)
+        })
+        document.querySelector('input').addEventListener('keyup', (e) => {
+            console.log(e.type)
+        })
+
+        window.addEventListener('load', () => {
+            console.log('window load')
+        })
+        window.addEventListener('resize', (evento) => {
+            console.log(evento.target.innerWidth)
+        })
+        window.addEventListener('focus', (evento) => {
+            console.log('você está na janela')
+        })
+        window.addEventListener('blur', (evento) => {
+            console.log('você saiu da janela')
+        })
+
+        document.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+            alert("clicou com o botão direito né??")
+        })
+
+        let contador = 0;
+        const idTimeout = setTimeout(() => {
+            console.log('Seja bem vindo!')
+        }, 5000)
+        const idInterval =setInterval(() => {
+            console.log(++contador)
+            document.querySelector('h1').innerHTML = contador
+        }, 1000)
+
+        document.querySelector('#a').addEventListener('click', ()=>{
+            clearInterval(idInterval)
+            console.log('interval desligado')
+        })
+        document.querySelector('#b').addEventListener('click', ()=>{
+            clearTimeout(idTimeout)
+            console.log('timeout desligado')
+        })
+
+        const botoes = document.querySelectorAll('button');
+
+        [...botoes].forEach(botao => {
+
+            botao.addEventListener('mouseenter', (e) => {
+                console.log(e.type)
+            })
+            botao.addEventListener('mouseleave', (e) => {
+                console.log(e.type)
+            })
+            botao.addEventListener('mousemove', (e) => {
+                console.log(e.type)
+            })
+            botao.addEventListener('mousedown', (e) => {
+                console.log(e.type)
+            })
+            botao.addEventListener('mouseup', (e) => {
+                console.log(e.type)
+            })
+            botao.addEventListener('click', (e) => {
+                console.log(e.type)
+            })
+
+
+            botao.addEventListener('click', (e) => {
+                console.log(e.target.id)
+                if (e.target.id == "pode") {
+                    console.log("pode clicar 😁")
+                } else {
+                    console.log("falei para não clicar 😡")
+                }
+                console.log(e)
+            })
+        });
+
+    </script>
+</body>
+
+</html>

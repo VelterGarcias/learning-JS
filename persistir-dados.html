@@ -8,21 +8,31 @@
 </head>
 
 <body>
+    <h1>Formulário de Cadastro</h1>
+    <h4 id="boas-vindas"></h4>
     <form onsubmit="pegarDados(event)">
         <label for="name">Nome</label>
-        <input type="text" id="name" name="name" value="Velter">
+        <input type="text" id="name" name="name">
         <hr>
         <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" value="velter@gmail.com">
+        <input type="email" id="email" name="email" >
         <hr>
         <label for="password">Senha</label>
-        <input type="password" id="password" name="password" value="123456">
+        <input type="password" id="password" name="password" >
         <hr>
         <button type="submit">Enviar</button>
 
     </form>
 
     <script>
+
+        function mostrarNome () {
+            if (localStorage.getItem('name')) {
+                document.getElementById('boas-vindas').innerHTML = `Seja bem vindo ${localStorage.getItem('name')}`
+            }
+        }
+        mostrarNome ()
+
         function pegarDados(e) {
             e.preventDefault()
 
@@ -31,18 +41,15 @@
 
             [...formulario.querySelectorAll("input")].forEach((tag) => {
                 dados[tag.name] = tag.value; 
+                //sessionStorage ou localStorage
+                localStorage.setItem(tag.name, dados[tag.name])
             })
             console.log(dados);
+            console.log(localStorage);
 
-            // Outra maneira de manipular formulário
+            mostrarNome ()
 
-            const form = new FormData(formulario);
             
-            const dados2 = form.forEach((valor, chave) => {
-                console.log(chave, valor)
-            })
-
-            console.log(form.get('name'))
         }
     </script>
 </body>
