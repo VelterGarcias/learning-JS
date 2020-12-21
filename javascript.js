@@ -36,3 +36,7 @@ document.querySelector(".sizeP").addEventListener("click", function () {
 document
   .querySelector(".corP")
   .addEventListener("click", () => tagP.classList.toggle("blue"));
+
+
+// Com o querySelector posso usar uma sequencia deles para pegar um elemento dentro de outro.
+console.log(document.querySelectorAll('body')[0].querySelector('span'))

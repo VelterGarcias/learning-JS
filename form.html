@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <form onsubmit="pegarDados(event)">
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name" value="Velter">
+        <hr>
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" value="velter@gmail.com">
+        <hr>
+        <label for="password">Senha</label>
+        <input type="password" id="password" name="password" value="123456">
+        <hr>
+        <button type="submit">Enviar</button>
+
+    </form>
+
+    <script>
+        function pegarDados(e) {
+            e.preventDefault()
+
+            const formulario = document.querySelector('form');
+            const dados = {};
+
+            [...formulario.querySelectorAll("input")].forEach((tag) => {
+                dados[tag.name] = tag.value; 
+            })
+            console.log(dados);
+
+            // Outra maneira de manipular formulário
+
+            const form = new FormData(formulario);
+            
+            const dados2 = form.forEach((valor, chave) => {
+                console.log(chave, valor)
+            })
+
+            console.log(form.get('name'))
+        }
+    </script>
+</body>
+
+</html>

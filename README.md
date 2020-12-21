@@ -89,3 +89,21 @@ nome = velter;
 - Object keys: retorna um array com as chaves do objeto
 - for (let chave in Object): percorrer as chaves de um objeto (forma mais antiga) 
 
+## Seção 06 - Funções
+- funções: não adianta criar, temos que chamar elas
+- Declaração de função (hoisting), Expressão de função, Arrow function
+- parâmetros ou argumentos: podemos usar argumentos padrões, caso não seja especificado nada.
+- retorno: para a execução da função mesmo que tenha outras ações abaixo.
+- nem o var sofre hoisting para fora da função. Ele vai apenas para o começo da função.
+- global ou window: faz a variável ficar visível para todos (node, navegador)
+- função anônima
+- arrow functions
+
+## Seção 07 - DOM
+- console.dir(): para visualizar os elementos não tags, mas como objetos.
+- querySelector: Com o querySelector posso usar uma sequencia deles para pegar um elemento dentro de outro.
+- location: hash, search, hostname, port
+- formulário: maneira mais manual de pegar os dados e depois com new FormData()
+- ReadFile: como ler arquivos (imagens) e mostrar elas no navegador como um preview
+
+parei na 77

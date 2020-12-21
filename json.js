@@ -59,17 +59,26 @@ const pessoa2 = {
   senha: "1235684653",
 };
 
-const uniao = Object.assign(pessoa, pessoa2)
-console.log(uniao)
+const uniao = Object.assign(pessoa, pessoa2);
+console.log(uniao);
 
-console.log("================ Object keys [maneira mais nova] ======================");
-console.log(Object.keys(uniao))
+console.log(
+  "================ Object keys [maneira mais nova] ======================"
+);
+console.log(Object.keys(uniao));
 // Com o keys, podemos fazer um "map" de um objeto
-Object.keys(uniao).forEach( chave => {
-  console.log(uniao[chave]) // usamos entre colchetes, pq se não ele procuraria uma chave "chave" kkk
-})
+Object.keys(uniao).forEach((chave) => {
+  console.log(uniao[chave]); // usamos entre colchetes, pq se não ele procuraria uma chave "chave" kkk
+});
 
-console.log("================ for para percorrer objetos [maneira mais antiga] ======================");
+console.log(
+  "================ for para percorrer objetos [maneira mais antiga] ======================"
+);
 for (let chave in uniao) {
-  console.log(uniao[chave])
+  console.log(uniao[chave]);
 }
+
+console.log(
+  "================ Spread Operator em Objetos (igual ao assign) ======================"
+);
+console.log({ ...pessoa, ...pessoa2 });
